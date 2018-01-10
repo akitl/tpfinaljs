@@ -1,0 +1,13 @@
+<h2>Mon frigo contient</h2>
+<h2 (click)="add()">Add</h2>
+<ul class="frigo">
+  <li *ngFor="let ing of ings" 
+  [class.selected]="ing === selecteding"
+  (click)="onSelect(ing)">
+    <span class="badge">{{ing.nom}}</span>
+  </li>
+</ul>
+
+
+<app-ingredient-detail [ing]="selectedIng"></app-ingredient-detail>
+
