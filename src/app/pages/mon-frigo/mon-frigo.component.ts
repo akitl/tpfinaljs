@@ -14,6 +14,7 @@ export class MonFrigoComponent implements OnInit {
   ings : Ingredient[];
 
   selectedIng: Ingredient;
+  addDetailBool: boolean = false;
 
   ngOnInit() {
     this.getIngredients();
@@ -26,15 +27,27 @@ export class MonFrigoComponent implements OnInit {
     this.selectedIng = ing;
   }
 
+  onSelectDel(ing: Ingredient): void {
+    this.IngredientService.delIngredients(ing);
+  }
+
   getIngredients(): void {
     this.IngredientService.getIngredients()
         .subscribe(ings => this.ings = ings);
   }
 
-  ingTest: Ingredient = { nom: "tata", quantite: 5, unite: 1 };
+  addDetail(): void{
+    this.addDetailBool = true;    
+  }
+
+  ingredientAdd(): void{
+    this.addDetailBool = false;    
+  }
+
+ 
   add(): void{
     
-    this.IngredientService.addIngredients(this.ingTest)    
+      
   }
 
 

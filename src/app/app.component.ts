@@ -20,7 +20,6 @@ export class AppComponent {
   
   constructor(router: Router) {
     this.router = router;
-    console.log("route!");
 
     this.sidebarMenus = [
       {title: 'Mon Frigo', icon: 'home', color: 'blue-500', link: '/pages/mon-frigo', exact: true},
@@ -29,7 +28,6 @@ export class AppComponent {
       {title: 'Ma liste de course', icon: 'info-circle', color: 'indigo-500', link: '/pages/ma-liste-de-course', exact: false}
     ];
 
-    console.log("menu!");
   
   }
 }

@@ -1,0 +1,19 @@
+<div *ngIf="rec">
+    
+      <h2> Nom: <br>
+        {{ rec.nom | uppercase }} 
+        <input [(ngModel)]="rec.nom" placeholder="nom"/>
+      </h2>
+        <label>
+          Description : <br>
+          {{ rec.desc }}
+          <input [(ngModel)]="rec.decs" placeholder="desc"/>
+        </label>
+        <label>
+        <li *ngFor="let ing of ings" >
+          <span>{{ing.nom}}</span>
+        </li>
+      </label>
+
+    
+    </div> 

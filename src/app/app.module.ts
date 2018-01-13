@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { IngredientService } from './ingredient.service';
 import { NotificationService } from './notification.service';
+import { AddDetailComponent } from './pages/add-detail/add-detail.component';
+import { RecetteDetailComponent } from './pages/recette-detail/recette-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { NotificationService } from './notification.service';
     MaListeDeCourseComponent,
     IngredientDetailComponent,
     NotificationsComponent,
+    AddDetailComponent,
+    RecetteDetailComponent,
   ],
   imports: [
     BrowserModule,

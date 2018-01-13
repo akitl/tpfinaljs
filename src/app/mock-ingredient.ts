@@ -12,5 +12,6 @@ export const INGREDIENTS: Ingredient[] = [
      { nom: "riz", quantite: 5, unite: 1 },
      { nom: "vodka", quantite: 5, unite: 1 },
      { nom: "poulet", quantite: 5, unite: 1 },
+     
 ];
 

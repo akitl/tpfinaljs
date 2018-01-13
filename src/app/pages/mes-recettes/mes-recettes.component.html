@@ -1,5 +1,12 @@
 <ul class="recette">
-    <li *ngFor="let ing of ings">
-      <span class="badge">{{ing.nom}}</span>
+    <li *ngFor="let rec of recs;let i = index">
+      <span class="badge" (click)="onSelect(rec)">{{rec.nom}}</span>
+      <span (click)="onSelectDel(rec)"> [X] </span>
+      <span *ngIf="recsFaisable[i]">  Possible</span>
+      <span *ngIf="!recsFaisable[i]"> Ingredient Manquant</span>
     </li>
+
+    <app-recette-detail *ngIf="rec" [rec]="selectedRec"></app-recette-detail>
   </ul>
+
+  

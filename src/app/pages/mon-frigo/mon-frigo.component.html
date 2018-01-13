@@ -1,13 +1,16 @@
 <h2>Mon frigo contient</h2>
-<h2 (click)="add()">Add</h2>
+<h4 (click)="addDetail()">+ ajouter un ingredient</h4>
+<div *ngIf="addDetailBool">
+<app-add-detail (notifyParent)="ingredientAdd()"></app-add-detail>
+</div>
 <ul class="frigo">
   <li *ngFor="let ing of ings" 
-  [class.selected]="ing === selecteding"
-  (click)="onSelect(ing)">
-    <span class="badge">{{ing.nom}}</span>
+  [class.selected]="ing === selecteding">
+    <span class="badge" (click)="onSelect(ing)">{{ing.nom}}</span>
+    <span (click)="onSelectDel(ing)">[X]</span>
   </li>
+  <app-ingredient-detail [ing]="selectedIng"></app-ingredient-detail>
 </ul>
 
 
-<app-ingredient-detail [ing]="selectedIng"></app-ingredient-detail>
 

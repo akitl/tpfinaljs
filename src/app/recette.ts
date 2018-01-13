@@ -4,5 +4,5 @@ export class Recette {
     nom: string;
     desc: string;
     img: string;
-    list: Array<Ingredient>;
+    list: Ingredient[];
   }
